@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Converter {
+public class StringConverter {
 
     public static List<Car> convertCarNamesToCarList(String carNames) throws OutOfCarNameLengthException {
         String[] carNameArray = carNames.split(",");

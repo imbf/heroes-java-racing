@@ -7,7 +7,7 @@ public class Car {
 
     private static final int MOVING = 1;
     private static final int NOT_MOVING = 0;
-    private static final int INDEX_ADJUSTMENT_VALUE = -1;
+    private static final int LAST_INDEX_ADJUSTMENT = -1;
 
     private String name;
     private List<Integer> movingStatuses;
@@ -32,7 +32,7 @@ public class Car {
     public void move(int randomNumber, int criteriaNumber) {
         movingStatuses.add(NOT_MOVING);
         if (randomNumber >= criteriaNumber) {
-            movingStatuses.remove(movingStatuses.size() + INDEX_ADJUSTMENT_VALUE);
+            movingStatuses.remove(movingStatuses.size() + LAST_INDEX_ADJUSTMENT);
             movingStatuses.add(MOVING);
         }
     }

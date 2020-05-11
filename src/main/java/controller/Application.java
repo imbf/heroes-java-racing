@@ -2,6 +2,7 @@ package controller;
 
 import exception.OutOfCarNameLengthException;
 import model.RacingGame;
+import util.StringConverter;
 import view.InputView;
 import view.ResultView;
 
@@ -14,7 +15,7 @@ public class Application {
         String carNames = inputView.inputCarNames();
         int attemptNumber = inputView.inputAttemptNumber();
 
-        racingGame.set(attemptNumber, carNames);
+        racingGame.setGame(attemptNumber, StringConverter.convertCarNamesToCarList(carNames));
         racingGame.start();
         resultView.printRacingGameResult(racingGame);
     }
